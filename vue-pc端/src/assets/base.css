@@ -1,0 +1,104 @@
+/* =========================================================
+   设计令牌（Design Tokens）—— 保留原始暗色 + 红色主色调
+   全局颜色、圆角、阴影、字号统一在此，便于后续维护
+   ========================================================= */
+:root {
+  /* 背景层级：由深到浅 */
+  --bg-base: #121212;        /* 页面底色 */
+  --bg-surface: #1e1e1e;     /* 卡片 / 面板 */
+  --bg-surface-2: #1a1a1a;   /* 次级面板 */
+  --bg-elevated: #262626;    /* 悬浮 / 输入框 */
+  --bg-input: #2a2a2a;
+
+  /* 描边 */
+  --border: #2d2d2d;
+  --border-strong: #3a3a3a;
+
+  /* 主色（原始红） */
+  --primary: #ff3b30;
+  --primary-hover: #e62e2e;
+  --primary-active: #cc2e25;
+  --primary-soft: rgba(255, 59, 48, 0.12);
+  --primary-soft-2: rgba(255, 59, 48, 0.22);
+
+  /* 文字层级 */
+  --text-1: #ffffff;   /* 标题 */
+  --text-2: #e0e0e0;   /* 正文 */
+  --text-3: #999999;   /* 次要 */
+  --text-4: #666666;   /* 弱化 / 占位 */
+
+  /* 状态色 */
+  --success: #34c759;
+  --warning: #ff9500;
+  --danger: #ff3b30;
+
+  /* 圆角 */
+  --radius-lg: 12px;
+  --radius: 10px;
+  --radius-sm: 6px;
+  --radius-pill: 999px;
+
+  /* 阴影 */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
+
+  /* 动效 */
+  --transition: 0.2s ease;
+
+  /* 字体 */
+  --font-family: "Microsoft YaHei", "PingFang SC", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* ============================ Reset ============================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--text-2);
+  background: var(--bg-base);
+  font-family: var(--font-family);
+  font-size: 14px;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* 滚动条美化（暗色） */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}

@@ -1,0 +1,154 @@
+@import './base.css';
+
+/* =========================================================
+   全局通用组件类（通用样式，减少各页面重复代码）
+   页面内尽量复用以下类，保持视觉统一
+   ========================================================= */
+
+/* 面包屑 */
+.crumb {
+  font-size: 13px;
+  color: var(--text-3);
+}
+.crumb .sep {
+  margin: 0 6px;
+  color: var(--text-4);
+}
+.crumb .current {
+  color: var(--primary);
+}
+
+/* 页面主标题区 */
+.page-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.page-head .title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-1);
+}
+
+/* 卡片 */
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+/* 按钮 */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 36px;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--text-2);
+  background: var(--bg-elevated);
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+.btn:hover {
+  background: #303030;
+}
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+.btn-primary:hover {
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+.btn-ghost {
+  background: transparent;
+  border-color: var(--border-strong);
+  color: var(--text-2);
+}
+.btn-ghost:hover {
+  background: var(--bg-elevated);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* 输入框 / 下拉 */
+.input,
+.select {
+  height: 36px;
+  padding: 0 12px;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-2);
+  font-size: 13px;
+  outline: none;
+  transition: var(--transition);
+}
+.input::placeholder {
+  color: var(--text-4);
+}
+.input:focus,
+.select:focus {
+  border-color: var(--primary);
+  background: var(--bg-elevated);
+}
+.select {
+  cursor: pointer;
+}
+
+/* 标签 */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  line-height: 1.6;
+  background: var(--bg-elevated);
+  color: var(--text-2);
+}
+
+/* 状态徽标 */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 9px;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  color: #fff;
+  background: var(--text-4);
+}
+.badge.success { background: var(--success); }
+.badge.warning { background: var(--warning); }
+.badge.danger  { background: var(--danger); }
+.badge.primary { background: var(--primary); }
+
+/* 图标按钮（表格操作列等） */
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  color: var(--text-3);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.icon-btn:hover {
+  background: var(--primary-soft);
+  color: var(--primary);
+}
